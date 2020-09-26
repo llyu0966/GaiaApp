@@ -54,6 +54,14 @@ public class Travel implements CarbonCalculator{
     }
 
     @Override
+    public String toString(){
+        return "Number of long round-trip flights: " + numOflongFlight 
+                +"; Number of median round-trip flights: " + numOfMediumFlight  
+                +"; Number of short round-trip flights: " + numOfShortFlight;
+                
+    }
+    
+    @Override
     public double getCarbonFootprint() {
         return (numOflongFlight*0.41 + numOfMediumFlight*0.21 + numOfShortFlight*0.06);
     }
